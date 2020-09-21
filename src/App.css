@@ -1,0 +1,61 @@
+.header, .footer{
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.navBar{
+  text-align: center;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-left: 0;
+}
+
+.container, .containerHome{
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid black;
+  width: 30%;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.containerHome{
+  font-weight: bold;
+}
+
+.containerHome img{
+  width: 100%;
+  border-radius: 5px;
+}
+
+.containerHome p{
+  background-color: white;
+  margin: 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.link{
+  display: inline-block;
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover{
+  background-color: darkblue;
+}
