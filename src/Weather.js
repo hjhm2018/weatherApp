@@ -36,10 +36,10 @@ function Weather() {
                 const { dispatch } = value;
 
                 return (
-                    <div className="container">
+                    <div className="col-md-4 mx-auto rounded mt-2 text-center border border-dark">
                         <p>
-                            <input type="text" value={place} placeholder="Enter city name" name="place" onChange={setNewPlace} />
-                            <button onClick={onClick.bind(this, dispatch)}>Search</button>
+                            <input className="rounded text-center" type="text" value={place} placeholder="Enter city name" name="place" onChange={setNewPlace} />
+                            <button className="btn btn-success m-2" onClick={onClick.bind(this, dispatch)}>Search</button>
                         </p>
 
                         <p><span role="img" aria-label="City emoji">&#127750;</span> <b>City:</b> {value.information.name}</p>

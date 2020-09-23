@@ -1,6 +1,6 @@
 import React from "react";
 
-const Context = React.createContext(); 
+const Context = React.createContext();
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -10,10 +10,10 @@ const reducer = (state, action) => {
         place: action.payload
       };
     case "UPDATE_INFO":
-        return {
-          ...state,
-          information: action.payload
-        };
+      return {
+        ...state,
+        information: action.payload
+      };
     default:
       return state;
   }
@@ -21,16 +21,16 @@ const reducer = (state, action) => {
 
 export class Provider extends React.Component {
   state = {
-    information: [], 
+    information: [],
     place: "vancouver",
     dispatch: action => {
       this.setState(state => reducer(state, action));
     }
   };
 
-  fetchData(place){
-    place= this.state.place;
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${place}&units=metric&APPID=34be59f7135178e87afd29051535654a`).then(response => {
+  fetchData(place) {
+    place = this.state.place;
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${place}&units=metric&APPID=${process.env.REACT_APP_apiKey}`).then(response => {
       response
         .json()
         .then(data => {
@@ -45,12 +45,12 @@ export class Provider extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchData();    
+    this.fetchData();
   }
 
   render() {
     return (
-      
+
       <Context.Provider value={this.state}>
         {this.props.children}
       </Context.Provider>

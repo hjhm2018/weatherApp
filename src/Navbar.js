@@ -4,14 +4,14 @@ import Weather from './Weather';
 
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
-export default function NavBar(){
-    return(<>
+export default function NavBar() {
+    return (<>
         <Router>
-            <div className="navBar">
-                <span className="link"><Link to="/">Home</Link></span>
-                <span className= "link"><Link to="/weather">Weather App</Link></span>
+            <div className="text-center m-2">
+                <span><Link className="btn btn-primary m-1" to="/">Home</Link></span>
+                <span><Link className="btn btn-primary m-1" to="/weather">Weather App</Link></span>
             </div>
-            
+
 
             <Switch>
                 <Route exact path="/" component={Home}></Route>
